@@ -2,7 +2,7 @@
 html {
 	box-sizing: border-box;
 	font-family: "Overpass", sans-serif;
-	/* font-size: 16px; */
+	font-size: 16px;
 }
 
 body {
@@ -18,7 +18,6 @@ a {
 }
 
 nav {
-	display: flex;
 	width: 100%;
 	margin: auto;
 }
@@ -50,17 +49,15 @@ header {
 .nav-list {
 	display: grid;
 	grid-auto-flow: column;
-	grid-template-columns: 250px 250px 250px;
+	grid-template-columns: auto 0.25fr;
 	width: 85%;
-	padding: 0;
-	margin: 0 50px;
+	margin: auto;
 }
 
 .blogr-big-nav {
 	font-weight: 600;
-	font-size: 2rem;
+	font-size: 3rem;
 	width: 125px;
-	padding: 25px;
 }
 
 .nav-list-btn {
@@ -72,7 +69,7 @@ header {
 .dropdown,
 .dropdown-menu {
 	list-style: none;
-	/* width: 60%; */
+	width: 60%;
 }
 
 .dropdown-menu {
@@ -88,23 +85,9 @@ header {
 	margin-top: 5px;
 }
 
-.ls-btn-group {
-	display: inline-block;
-	margin-top: 25px;
-	min-width: 400px;
-}
-
-.nav-btn {
-	min-width: 125px;
-}
-
-.nav-btn-link:first-of-type {
-	margin-right: 35px;
-}
-
 /* ------------NAVIGATION BAR---------------------- */
 
-/* .header {
+.header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -123,10 +106,10 @@ header {
 	justify-self: center;
 } */
 
-/* .attribution {
+.attribution {
 	font-size: 11px;
 	text-align: center;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
-} */
+}

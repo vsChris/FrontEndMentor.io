@@ -1,0 +1,259 @@
+/* -------------VARS ---------------- */
+html {
+	--veryLightRed: hsl(13, 100%, 72%);
+	--lightRed: hsl(353, 100%, 62%);
+	--darkGreyBlue: hsl(237, 17%, 21%);
+	--deSaturatedBlue: hsl(237, 23%, 32%);
+}
+/* -------------VARS ---------------- */
+/* ------------BASE---------------------- */
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 375px;
+	overflow-x: hidden;
+	font-family: "Overpass", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+nav {
+	display: flex;
+	min-width: 100vw;
+	margin: 0 auto 75px;
+}
+
+header {
+	background: url(/blogr/images/bg-pattern-intro.svg),
+		linear-gradient(0.5turn, var(--veryLightRed), var(--lightRed));
+	background-size: 95rem, auto;
+	background-position: 43% 37%;
+	background-repeat: no-repeat;
+	min-height: 550px;
+	border-bottom-left-radius: 85px;
+	color: #fff;
+}
+
+/* ------------BASE---------------------- */
+
+/*  MENU ANIMATIONS */
+
+.menu-btn-burger::before {
+	transform: translateY(-12px);
+}
+
+.menu-btn-burger::after {
+	transform: translateY(12px);
+}
+
+.menu-btn.open {
+	left: 41%;
+}
+
+.menu-btn.open .menu-btn-burger {
+	transform: translateX(-48px);
+	background: transparent;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+	transform: rotate(45deg) translate3d(35px, -35px, 0);
+	background: var(--backgroundGrey);
+}
+.menu-btn.open .menu-btn-burger::after {
+	transform: rotate(-45deg) translate3d(35px, 35px, 0);
+	background: var(--backgroundGrey);
+}
+
+/* MENU ANIMATIONS END */
+
+/* ------------NAVIGATION BAR---------------------- */
+
+.blogr-big-nav {
+	display: inline-block;
+	padding: 15px;
+	justify-content: baseline;
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-size: 2rem;
+	width: 125px;
+	padding: 35px;
+}
+
+.menu-btn {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: 1500;
+	top: 26px;
+	left: 300px;
+	height: 48px;
+	width: 48px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: all 0.75s ease-in-out;
+	padding: 0;
+}
+
+.menu-btn-burger {
+	position: absolute;
+	left: 3px;
+	width: 35px;
+	height: 3px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all 0.75s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	width: 35px;
+	height: 3px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all 0.5s ease-in-out;
+}
+
+/* .top-lvl-link,
+.blogr-big-nav {
+	display: inline-block;
+	padding: 15px;
+	justify-content: baseline;
+} */
+
+.nav-list {
+	visibility: hidden;
+	width: 0;
+	position: absolute;
+}
+
+.nav-list .top-lvl-link {
+	margin-top: 15px;
+}
+
+/* .nav-list {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 250px 250px 250px;
+	width: 85%;
+	padding: 0;
+	margin: 0 50px;
+} */
+
+.nav-list.show {
+	visibility: visible;
+	background: var(--tan);
+	display: block;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	/* transition: width 1s ease-in; */
+}
+.nav-list-btn {
+	list-style: none;
+	position: relative;
+	justify-self: end;
+}
+
+.dropdown,
+.dropdown-menu {
+	list-style: none;
+	/* width: 60%; */
+}
+
+.dropdown-menu {
+	background: #f1c01ba9;
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	list-style: none;
+	padding: 10px;
+	visibility: hidden;
+}
+
+.dropdown-menu li {
+	margin-top: 5px;
+}
+
+.ls-btn-group {
+	display: inline-block;
+	margin-top: 25px;
+	min-width: 400px;
+}
+
+.nav-btn {
+	min-width: 125px;
+}
+
+.nav-btn-link:first-of-type {
+	margin-right: 35px;
+}
+
+/* ------------NAVIGATION BAR---------------------- */
+
+/* --------- TITLE BLOCK --------------------------- */
+
+.title-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title-block-content {
+	margin: auto 12% 40px;
+}
+
+.header-title,
+.header-subline {
+	text-align: center;
+}
+
+.header-btn {
+	width: 150px;
+	height: 46px;
+	border-radius: 25px;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.header-btn:first-of-type {
+	margin-right: 10px;
+}
+
+.white-btn {
+	border: none;
+	color: var(--lightRed);
+}
+
+.transparent-btn {
+	background: none;
+	border-color: #fff;
+	border-width: 2px;
+	color: #fff;
+}
+
+/* --------- TITLE BLOCK --------------------------- */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
