@@ -53,22 +53,17 @@ header {
 	transform: translateY(12px);
 }
 
-.menu-btn.open {
-	left: 41%;
-}
-
 .menu-btn.open .menu-btn-burger {
-	transform: translateX(-48px);
 	background: transparent;
 }
 
 .menu-btn.open .menu-btn-burger::before {
-	transform: rotate(45deg) translate3d(35px, -35px, 0);
-	background: var(--backgroundGrey);
+	transform: rotate(45deg);
+	background: #fff;
 }
 .menu-btn.open .menu-btn-burger::after {
-	transform: rotate(-45deg) translate3d(35px, 35px, 0);
-	background: var(--backgroundGrey);
+	transform: rotate(-45deg);
+	background: #fff;
 }
 
 /* MENU ANIMATIONS END */
