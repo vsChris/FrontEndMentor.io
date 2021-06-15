@@ -26,7 +26,7 @@ a {
 
 nav {
 	display: flex;
-	min-width: 100vw;
+	min-width: 100%;
 	margin: 0 auto 75px;
 }
 
@@ -72,13 +72,11 @@ header {
 
 .blogr-big-nav {
 	display: inline-block;
-	padding: 15px;
+	padding: 1em;
 	justify-content: baseline;
-	font-size: 1.25rem;
 	font-weight: 600;
 	font-size: 2rem;
 	width: 125px;
-	padding: 35px;
 }
 
 .menu-btn {
@@ -87,8 +85,10 @@ header {
 	justify-content: center;
 	align-items: center;
 	z-index: 1500;
-	top: 26px;
-	left: 300px;
+	/* top: 4.5%;
+	left: 75%; */
+	top: 1.75em;
+	left: 75%;
 	height: 48px;
 	width: 48px;
 	background-color: transparent;
@@ -133,40 +133,13 @@ header {
 	position: absolute;
 }
 
-.nav-list .top-lvl-link {
-	margin-top: 15px;
+.top-lvl-link a {
+	font-family: "Ubuntu", "sans-serif";
+	color: hsl(237, 23%, 32%);
+	font-weight: 500;
 }
 
-/* .nav-list {
-	display: grid;
-	grid-auto-flow: column;
-	grid-template-columns: 250px 250px 250px;
-	width: 85%;
-	padding: 0;
-	margin: 0 50px;
-} */
-
-.nav-list.show {
-	visibility: visible;
-	background: var(--tan);
-	display: block;
-	position: absolute;
-	height: 100vh;
-	width: 100vw;
-	z-index: 999;
-	left: 0;
-	top: 0;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	/* transition: width 1s ease-in; */
-}
-.nav-list-btn {
-	list-style: none;
-	position: relative;
-	justify-self: end;
-}
-
-.dropdown,
+.top-lvl-link,
 .dropdown-menu {
 	list-style: none;
 	/* width: 60%; */
@@ -179,25 +152,106 @@ header {
 	list-style: none;
 	padding: 10px;
 	visibility: hidden;
+	height: 0;
+	width: 0;
 }
 
 .dropdown-menu li {
 	margin-top: 5px;
 }
 
-.ls-btn-group {
-	display: inline-block;
-	margin-top: 25px;
-	min-width: 400px;
+.nav-list.show {
+	visibility: visible;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-self: center;
+	position: absolute;
+	background: #fff;
+	height: 450px;
+	width: 275px;
+	z-index: 999;
+	top: 75px;
+	left: 10%;
+	border-radius: 5px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	/* transition: width 1s ease-in; */
+}
+
+/* .nav-list.show {
+	visibility: visible;
+	position: absolute;
+	background: #fff;
+	display: block;
+	height: 450px;
+	width: 275px;
+	z-index: 999;
+	top: 75px;
+	left: 30px;
+	border-radius: 5px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	align-content: center;
+	/* transition: width 1s ease-in; 
+} */
+
+.nav-list.show li {
+	padding-top: 35px;
+}
+
+.nav-list.show li:last-child {
+	padding-top: 0;
+}
+
+.nav-list-btn {
+	list-style: none;
+	position: relative;
+	justify-self: end;
+}
+
+.nav-list.show .nav-btn {
+	width: 125px;
+	height: 46px;
+	border-radius: 25px;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.nav-list.show li:nth-child(4) {
+	padding-top: 80px;
+}
+
+.nav-list.show .login-btn {
+	background: transparent;
+	border: none;
+	color: hsl(237, 23%, 32%);
+}
+
+.nav-list.show .signup-btn {
+	background: linear-gradient(0.25turn, var(--veryLightRed), var(--lightRed));
+	color: #fff;
+	border: none;
 }
 
 .nav-btn {
 	min-width: 125px;
 }
 
-.nav-btn-link:first-of-type {
+/* .nav-btn-link:first-of-type {
 	margin-right: 35px;
-}
+} */
+
+/* .nav-list {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 250px 250px 250px;
+	width: 85%;
+	padding: 0;
+	margin: 0 50px;
+} */
 
 /* ------------NAVIGATION BAR---------------------- */
 
