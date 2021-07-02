@@ -4,6 +4,8 @@ html {
 	--lightRed: hsl(353, 100%, 62%);
 	--darkGreyBlue: hsl(237, 17%, 21%);
 	--deSaturatedBlue: hsl(237, 23%, 32%);
+	--grayishBlue: hsl(240, 2%, 79%);
+	--lightGrayishBlue: hsl(240, 23%, 96%);
 }
 /* -------------VARS ---------------- */
 /* ------------BASE---------------------- */
@@ -15,6 +17,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-width: 375px;
+	max-width: 1440px;
 	overflow-x: hidden;
 	font-family: "Overpass", sans-serif;
 }
@@ -161,8 +164,8 @@ header {
 }
 
 .dropdown-menu {
-	background: #f1c01ba9;
 	font-family: "Ubuntu", sans-serif;
+	background: var(--lightGrayishBlue);
 	font-weight: 400;
 	list-style: none;
 	padding: 10px;
@@ -173,12 +176,13 @@ header {
 
 .dropdown-menu.show {
 	visibility: visible;
-	min-height: 115px;
-	width: 180px;
-	margin-left: -32px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	border-radius: 5px;
+	min-height: 115px;
+	width: 180px;
+	margin-left: -47px;
 }
 
 /* .dropdown-menu.show li {
@@ -192,15 +196,15 @@ header {
 .nav-list.show {
 	visibility: visible;
 	display: grid;
-	grid-template-rows: auto;
+	grid-template-rows: repeat(5, min-content);
 	padding-left: 0;
 	align-self: center;
 	background: #fff;
-	min-height: 475px;
-	width: 75vw;
+	min-height: 335px;
+	width: 75%;
 	z-index: 999;
 	top: 75px;
-	left: 10%;
+	left: 12%;
 	border-radius: 5px;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -208,13 +212,27 @@ header {
 }
 
 .nav-list.show .top-lvl-link {
-	padding-top: 30px;
+	/* padding-top: 30px; */
 	margin: 0 auto;
-	/* width: 135px; */
+	width: 100px;
+	text-align: center;
 }
 
-.nav-list.show .top-lvl-link:nth-child(4) {
-	padding-top: 80px;
+.nav-list.show .top-lvl-link:first-of-type {
+	padding-top: 30px;
+}
+
+.nav-list.show .dropdown-menu:nth-of-type(3) {
+	margin-bottom: 15px;
+}
+
+.nav-list.show .top-lvl-link:nth-of-type(3)::after {
+	content: "";
+	position: absolute;
+	width: 245px;
+	left:18px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid var(--lightGrayishBlue);
 }
 
 /* .nav-list.show {
@@ -238,10 +256,6 @@ header {
 	padding-top: 35px;
 } */
 
-.nav-list.show .top-lvl-link:last-child {
-	padding-top: 0;
-}
-
 /* .nav-list.show .open-menu:hover a::after {
 	transform: rotate(180deg);
 } */
@@ -252,8 +266,14 @@ header {
 	justify-self: end;
 }
 
+.nav-list.show .nav-btn-link {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .nav-list.show .nav-list-btn {
-	justify-self: center;
+	margin: 0 auto;
+	/* width: 155px; */
 }
 
 .nav-list.show .nav-btn {
@@ -276,6 +296,7 @@ header {
 	background: linear-gradient(0.25turn, var(--veryLightRed), var(--lightRed));
 	color: #fff;
 	border: none;
+	margin-bottom: 5px;
 }
 
 .nav-btn {
