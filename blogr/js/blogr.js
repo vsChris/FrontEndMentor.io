@@ -2,9 +2,9 @@ const hamburger = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav-list');
 const dropdownLinks = document.querySelectorAll('.top-lvl-link');
 const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+const carets = document.querySelectorAll('.caret');
 
 let menuOpen = false;
-let dropdownOpen = false;
 
 console.log(hamburger);
 console.log(nav);
@@ -23,22 +23,28 @@ function isMenuOpen() {
   }
 }
 
-function handleDropDown(e) {
-  if (!dropdownOpen) {
-    e.target.children[0].firstElementChild.classList.add('open');
-    e.target.children[1].classList.add('show')
-    dropdownOpen = true;
-    console.log(e);
-  } else {
-    e.target.children[0].firstElementChild.classList.remove('open');
-    e.target.children[1].classList.remove('show')
-    dropdownOpen = false;
-    console.log(e);
-  }
+function closeOpenSub () {
+  dropdownMenus.forEach(subMenu => {
+    if(subMenu.classList.contains('show')) {
+      subMenu.classList.remove('show')
+    }
+  })
+  carets.forEach(caret => {
+    if(caret.classList.contains('open')) {
+      caret.classList.remove('open');
+    }
+  }) 
+}
 
+function handleDropDown(e) {
+    closeOpenSub();
+    e.target.children[0].firstElementChild.classList.toggle('open');
+    e.target.children[1].classList.toggle('show')
+    dropdownOpen = true;
 }
 
 hamburger.addEventListener('click', isMenuOpen);
+
 dropdownLinks.forEach(link => {
   link.addEventListener('click', handleDropDown);
 })

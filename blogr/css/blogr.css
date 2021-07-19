@@ -144,16 +144,16 @@ header {
 }
 
 .top-lvl-link a,
-.carrot {
+.caret {
 	cursor: pointer;
 }
 
-.carrot {
+.caret {
 	content: url(/blogr/images/icon-arrow-dark.svg);
 	padding-left: 5px;
 	transition: transform 0.25s;
 }
-.carrot.open {
+.caret.open {
 	transform: rotate(0.5turn) translateX(-5px);
 }
 
@@ -226,13 +226,24 @@ header {
 	margin-bottom: 15px;
 }
 
-.nav-list.show .top-lvl-link:nth-of-type(3)::after {
+/* .nav-list.show .top-lvl-link:nth-of-type(3)::after {
 	content: "";
 	position: absolute;
 	width: 245px;
-	left:18px;
+	left:18%;
 	margin-bottom: 15px;
 	border-bottom: 2px solid var(--lightGrayishBlue);
+} */
+.nav-list.show .top-lvl-link:nth-of-type(3)::after {
+	content: '';
+    position: absolute;
+    width: 88%;
+    height: 1.15px;
+    left: 4.5vw;
+    display: block;
+    clear: both;
+    background-color: var(--lightGrayishBlue);
+	margin-top: 15px
 }
 
 /* .nav-list.show {
@@ -290,13 +301,14 @@ header {
 	background: transparent;
 	border: none;
 	color: hsl(237, 23%, 32%);
+	margin-top: 15px;
 }
 
 .nav-list.show .signup-btn {
 	background: linear-gradient(0.25turn, var(--veryLightRed), var(--lightRed));
 	color: #fff;
 	border: none;
-	margin-bottom: 5px;
+	margin-bottom: 25px;
 }
 
 .nav-btn {
@@ -361,6 +373,38 @@ header {
 }
 
 /* --------- TITLE BLOCK --------------------------- */
+
+/* --------- CONTENT BLOCK --------------------------- */
+.container {
+	display: grid;
+}
+
+.content-block {
+	position: relative;
+	text-align: center;
+	margin: 50px auto 0px;
+	width: 70%;
+}
+
+.content-block h2 {
+	color: var(--deSaturatedBlue);
+	font-size: 1.55em;
+}
+
+.illustration-editor {
+	background: url(/blogr/images/illustration-editor-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* max-height: 85vh; */
+    width: 406px;
+    /* min-height: 315px; */
+	height: 331px;
+    position: relative;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+/* --------- CONTENT BLOCK --------------------------- */
 
 .attribution {
 	font-size: 11px;
