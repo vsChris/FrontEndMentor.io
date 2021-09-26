@@ -1,0 +1,86 @@
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
+:root {
+    --lt-bright-blue: hsl(220, 98%, 61%);
+    --lt-very-light-grey: hsl(0, 0%, 98%);
+    --lt-very-light-GB:hsl(236, 33%, 92%);
+    --lt-light-GB: hsl(233, 11%, 84%);
+    --lt-dark-GB: hsl(236, 9%, 61%);
+    --lt-very-dark-GB: hsl(235, 19%, 35%);
+    --dt-very-dark-blue: hsl(235, 21%, 11%);
+    --dt-very-dark-DB: hsl(235, 24%, 19%);
+    --dt-light-GB: hsl(234, 39%, 85%);
+    --dt-light-GB-hover: hsl(236, 33%, 92%);
+    --dt-dark-GB: hsl(234, 11%, 52%);
+    --dt-very-dark-GB: hsl(233, 14%, 35%);
+    --dt-very-dark-GB2: hsl(237, 14%, 26%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background: url(/images/bg-mobile-light.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 25vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 48px 25px;
+}
+
+/*  ------ HEADER ------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.app-name {
+    font-weight: 400;
+    font-size: 2em;
+    color: var(--lt-very-light-grey);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.header-btn {
+    background-image: url(/images/icon-moon.svg);
+    background-color: transparent;
+    border: none;
+    height: 26px;
+    width: 26px;
+}
+/*  ------ HEADER END ------------- */
+/*  ------ TODO  ------------- */
+.new-todo-section {
+    display: flex;
+    justify-content: center;
+    border-radius:3px;
+    margin: 2em 0 1em 0;
+    width: 20rem;
+    background: var(--lt-very-light-grey);
+}
+.todo-text-box{
+    background: var(--lt-very-light-grey);
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    padding: 1em;
+    font-size: 1.25em;
+}
+.submit-btn{
+    background: var(--lt-very-light-grey);
+    border:none;
+    font-size: 1.25em;
+    width: 2.5rem;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
