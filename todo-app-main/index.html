@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="docs/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="docs/style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <main>
-      <div class="header">
-        <p class="app-name">Todo</p>
-        <button class="header-btn" title="Change theme" id="theme-btn" data-theme="dark"></button>
-      </div>
-      <div class="new-todo-section">
-        <input type="text" name="" class="todo-text-box"id="addTodo" placeholder="Create a new todo...">
-        <button class="submit-btn">&plus;</button>
-      </div>
-    </main>
+		<title>Frontend Mentor | Todo app</title>
 
-    <!-- Add dynamic number --> items left   Clear Completed
-    <div class="todo-actions">
-      <span class="action" id="allTodos"> All </span>
-      <span class="action" id="activeTodos">Active</span>
-      <span class="action" id="completedTodos">Completed</span>
-    </div>
-    <footer>
-      <div class="instruction">
-        <p class="footer-text">Drag and drop to reorder list</p>
-      </div>
-    </footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Chris LeGrand</a>.
-    </div>
-  </div>
-</body>
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<main>
+				<div class="header">
+					<p class="app-name">Todo</p>
+					<button
+						class="header-btn"
+						title="Change theme"
+						id="theme-btn"
+						data-theme="dark"
+					></button>
+				</div>
+				<div class="new-todo-section">
+					<input
+						type="text"
+						name=""
+						class="todo-text-box"
+						id="addTodo"
+						placeholder="Create a new todo..."
+					/>
+					<button class="submit-btn">&plus;</button>
+				</div>
+			</main>
+
+			<!-- Add dynamic number -->
+			items left Clear Completed
+			<div class="todo-actions">
+				<a class="action active" id="allTodos"> All </a>
+				<a class="action" id="activeTodos">Active</a>
+				<a class="action" id="completedTodos">Completed</a>
+			</div>
+			<footer>
+				<div class="instruction">
+					<p class="footer-text">Drag and drop to reorder list</p>
+				</div>
+			</footer>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Chris LeGrand</a>.
+			</div>
+		</div>
+	</body>
 </html>
