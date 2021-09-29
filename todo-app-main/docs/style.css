@@ -40,24 +40,32 @@ body {
 	padding: 48px 25px;
 }
 
+.btn {
+	font-size: inherit;
+	font-family: inherit;
+}
+
 /*  ------ HEADER ------------- */
 .header {
 	display: flex;
 	justify-content: space-between;
 }
 .app-name {
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 2em;
 	color: var(--lt-very-light-grey);
 	text-transform: uppercase;
 	letter-spacing: 5px;
+	text-decoration: none;
+	cursor: pointer;
 }
-.header-btn {
+.theme-btn {
 	background-image: url(/images/icon-moon.svg);
 	background-color: transparent;
 	border: none;
 	height: 26px;
 	width: 26px;
+	cursor: pointer;
 }
 /*  ------ HEADER END ------------- */
 /*  ------ TODO  ------------- */
@@ -88,6 +96,7 @@ body {
 }
 
 .todo-container {
+	font-size: 0.9rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -97,15 +106,21 @@ body {
 	margin: 1rem 0 1rem 0;
 }
 
-.todo-list .todo {
+.todo,
+.default-message {
+	color: var(--lt-very-dark-GB);
 	display: flex;
 	/* justify-content: center; */
 	padding: 1rem;
-	margin: 0 auto;
+	min-height: 60px;
 	border-bottom: 1px solid var(--lt-very-light-grey);
 }
 
-.checkbox {
+.default-message {
+	justify-content: center;
+}
+
+.default-message .checkbox {
 	/* 0.15rem 0.5rem */
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
@@ -128,8 +143,19 @@ body {
 		linear-gradient(to bottom, #57ddff, #c058f3);
 }
 
+.todo-text {
+	flex-grow: 1;
+}
+
+.todo-text.complete {
+	text-decoration: line-through;
+}
+
 .delete-todo-btn {
-	width: 2.5rem;
+	background: none;
+	border: none;
+	margin-left: 3rem;
+	cursor: pointer;
 }
 
 .list-status {

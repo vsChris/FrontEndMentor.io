@@ -27,67 +27,40 @@
 	</head>
 	<body>
 		<div class="container">
-			<main>
+			<header>
 				<div class="header">
-					<p class="app-name">Todo</p>
+					<a href="#" class="app-name">Todo</a>
 					<button
-						class="header-btn"
+						class="theme-btn"
 						title="Change theme"
 						id="theme-btn"
 						data-theme="dark"
 					></button>
 				</div>
 				<div class="new-todo-section">
-					<input
-						type="text"
-						name=""
-						class="todo-text-box"
-						id="addTodo"
-						placeholder="Create a new todo..."
-					/>
-					<button class="submit-btn">&plus;</button>
+					<form action="" class="todo-form">
+						<input
+							type="text"
+							name=""
+							class="todo-text-box"
+							id="addTodo"
+							placeholder="Create a new todo..."
+						/>
+						<button type="submit" class="submit-btn">&plus;</button>
+					</form>
 				</div>
-			</main>
+			</header>
 
 			<!-- Add dynamic number -->
 			<div class="todo-container">
 				<ul class="todo-list">
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox checked" />
-						<p>1st todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox" />
-						<p>2nd todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox" />
-						<p>3rd todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox" />
-						<p>4th todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox" />
-						<p>5th todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
-					<li class="todo draggable">
-						<input type="checkbox" class="checkbox" />
-						<p>6th todo</p>
-						<button class="delete-todo-btn"></button>
-					</li>
+					<li class="default-message">No tasks to complete</li>
 				</ul>
 				<div class="list-status">
 					<p class="todos-left">
-						<span class="todo-counter"> items left</span>
+						<span class="todo-counter"> </span> items left
 					</p>
-					<button class="clear-todo-btn">Clear Completed</button>
+					<button class="clear-todo-btn btn">Clear Completed</button>
 				</div>
 			</div>
 			<div class="todo-actions">
@@ -107,5 +80,6 @@
 				>. Coded by <a href="#">Chris LeGrand</a>.
 			</div>
 		</div>
+		<script src="./docs/todo.js"></script>
 	</body>
 </html>

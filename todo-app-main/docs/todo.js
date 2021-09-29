@@ -1,0 +1,14 @@
+const todoList = document.querySelector('.todo-list');
+const themeToggle = document.querySelector('.theme-btn');
+const todoForm = document.querySelector('.todo-form');
+const todoActions = document.querySelectorAll('.action');
+const todoListStatus = document.querySelector('.list-status');
+const todosLeft = document.querySelector('.todo-counter');
+const clearTodo = document.querySelector('.clear-todo-btn');
+console.log(todoList);
+console.log(themeToggle);
+console.log(todoForm);
+console.log(todoActions);
+console.log(todoListStatus);
+console.log(todosLeft);
+console.log(clearTodo);
